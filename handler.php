@@ -19,16 +19,20 @@
       <div class="page-content" style="text-align: center; margin-top: 50px;">
         <?php
         if (isset($_POST['digits'])) {
-          $digits = intval($_POST['digits']); 
+          $digits = intval($_POST['digits']);
 
           if ($digits > 0) {
-            $output = shell_exec("python3 assignment.py " . escapeshellarg($digits)); 
-            echo "<p>Approximation of Pi with $digits terms: " . htmlspecialchars($output) . "</p>"; 
+            $output = shell_exec("python3 assignment.py " . escapeshellarg($digits));
+            echo "<p>Approximation of Pi with $digits terms: " . htmlspecialchars($output) . "</p>";
           } else {
             echo "<p>Error: Please enter a positive integer.</p>";
           }
         } else {
           echo "<p>Error: No input received.</p>";
         }
+
         ?>
-<html>
+        <a href="index.html" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+          Try Again
+        </a>
+        <html>
