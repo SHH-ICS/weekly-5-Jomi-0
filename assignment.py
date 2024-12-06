@@ -11,12 +11,10 @@ def calculatePi(digits):
         result += (-1) ** i * (4 / (2 * i + 1))  
     return result
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1:
-        digits = sys.argv[1]
+if digits == int:
         print(calculatePi(digits)) 
-    elif digits!= int:
+elif digits!= int:
         print("Input must be a number!")
-    else:
+else:
         print("Please provide a valid input.") 
 
