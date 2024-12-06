@@ -1,6 +1,7 @@
 import sys
-
+digits= input("Type a number: ")
 def calculatePi(digits):
+    
     try:
         digits = int(digits) 
     except ValueError:
@@ -9,12 +10,6 @@ def calculatePi(digits):
     result = 0
     for i in range(digits):
         result += (-1) ** i * (4 / (2 * i + 1))  
-    return result
+    print(result)
 
-if digits == int:
-        print(calculatePi(digits)) 
-elif digits!= int:
-        print("Input must be a number!")
-else:
-        print("Please provide a valid input.") 
-
+calculatePi(digits)
